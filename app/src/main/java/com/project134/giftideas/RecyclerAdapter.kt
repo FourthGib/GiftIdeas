@@ -9,13 +9,13 @@ import android.widget.Toast
 import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerAdapter (private var people: List<String>, private var images: List<Int>):
+class RecyclerAdapter(private var people: List<String>):
 RecyclerView.Adapter<RecyclerAdapter.ViewHolder>(){
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
         val personName: TextView = itemView.findViewById(R.id.person_item)
-        val itemPicture: ImageView = itemView.findViewById(R.id.imageView)
+
 
         init {
             itemView.setOnClickListener {v: View ->
@@ -77,7 +77,7 @@ RecyclerView.Adapter<RecyclerAdapter.ViewHolder>(){
      */
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.personName.text = people[position]
-        holder.itemPicture.setImageResource(images[position])
+
     }
 
     /**
@@ -89,3 +89,4 @@ RecyclerView.Adapter<RecyclerAdapter.ViewHolder>(){
         return people.size
     }
 }
+
