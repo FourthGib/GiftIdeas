@@ -14,18 +14,12 @@ import com.project134.giftideas.databinding.FragmentItemBinding
  * TODO: Replace the implementation with code for your data type.
  */
 class MyItemRecyclerViewAdapter(
-    private val values: List<PlaceholderItem>
-) : RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder>() {
+        private val values: List<PlaceholderItem>)
+    : RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
-        return ViewHolder(
-            FragmentItemBinding.inflate(
-                LayoutInflater.from(parent.context),
-                parent,
-                false
-            )
-        )
+    return ViewHolder(FragmentItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
 
     }
 
