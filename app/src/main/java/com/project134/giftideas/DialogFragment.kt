@@ -22,6 +22,7 @@ class DialogFragment : DialogFragment(){
         var add_button : Button = rootView.findViewById(R.id.add_button)
         var cancel_button : Button = rootView.findViewById(R.id.cancel)
 
+
         add_button.setOnClickListener{
             var edit_box : EditText = rootView.findViewById(R.id.edit_name)
             var result = edit_box.text.toString()

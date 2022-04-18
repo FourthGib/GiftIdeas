@@ -1,5 +1,6 @@
 package com.project134.giftideas
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.view.menu.ActionMenuItemView
+import androidx.fragment.app.createViewModelLazy
 import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerAdapter(private var people: List<String>):
@@ -20,7 +22,12 @@ RecyclerView.Adapter<RecyclerAdapter.ViewHolder>(){
         init {
             itemView.setOnClickListener {v: View ->
                 val position: Int = adapterPosition
-                Toast.makeText(itemView.context, "You clicked on name # ${position + 1}", Toast.LENGTH_LONG).show()
+                var itemFragment = ItemFragment()
+
+
+                Toast.makeText(itemView.context, "You clicked on name # ${position + 1}",
+                    Toast.LENGTH_LONG).show()
+
             }
         }
 
