@@ -23,7 +23,7 @@ RecyclerView.Adapter<RecyclerAdapter.ViewHolder>(){
             itemView.setOnClickListener {v: View ->
                 val position: Int = adapterPosition
                 var itemFragment = ItemFragment()
-
+                itemFragment.onCreate(savedInstanceState = Bundle())
 
                 Toast.makeText(itemView.context, "You clicked on name # ${position + 1}",
                     Toast.LENGTH_LONG).show()
